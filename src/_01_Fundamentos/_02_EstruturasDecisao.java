@@ -2,7 +2,7 @@ package _01_Fundamentos;
 
 import java.util.Scanner;
 
-public class _02_estruturasDecisao {
+public class _02_EstruturasDecisao {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
