@@ -5,6 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Exercicio01 {
@@ -48,7 +49,17 @@ public class Exercicio01 {
 */
 
         Path arquivo = Paths.get("/home/francisco/Projects/testIO/tarefas.txt");
+        //faz a escrita no arquivo
         Files.write(arquivo, atividades);
+
+        // faz a leitura no arquivo
+        List<String> minhasTarefas = Files.readAllLines(arquivo);
+
+        //ler a lista minhasTarefas
+        System.out.println("======= Tarefas para realizar hoje =======");
+        for (String task : minhasTarefas) {
+            System.out.println("Tarefa: " + task);
+        }
 
         sc.close();
     }
